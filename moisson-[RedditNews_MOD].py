@@ -1,8 +1,9 @@
 #! python3
 # coding: utf-8
+# Martin Ouellet-Diotte
 
-# À l'aide de l'API de Reddit, ce petit code permet de moissonner les données des sous-forums du site (subreddit)
-# Dans ce cas-ci, compilation des 1000 publications les plus controversées du forum principal de nouvelles (r/News).
+# À l'aide de l'API de Reddit, ce petit code permet de moissonner les données des sous-forums du site (subreddits)
+# Dans ce cas-ci, compilation des 1000 publications les plus controversées du forum principal de nouvelles (r/News)
 # Moissonage réalisé avec l'aide du tuto suivant: http://www.storybench.org/how-to-scrape-reddit-with-python/
 
 import praw # Praw permet la connexion à l'API de Reddit, téléchargement externe. 
@@ -37,4 +38,4 @@ for post in sub.controversial(limit=1000): # On ouvre ici la boucle et on déter
 	td = csv.writer(News)
 	td.writerow(e)
 
-# On peut constater que les nouvelles concernant la Palestine et Israel sont particulièrement controversées!
+# On peut constater que les nouvelles concernant la Palestine et Israel sont particulièrement controversées, voir CSV dans le repo.
